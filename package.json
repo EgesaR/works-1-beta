@@ -22,6 +22,8 @@
     "@nextui-org/tabs": "^2.0.37",
     "@syncfusion/ej2-react-documenteditor": "^27.1.53",
     "framer-motion": "^11.11.8",
+    "lineicons": "^1.0.3",
+    "lineicons-react": "^1.0.5",
     "next": "^14.2.15",
     "next-themes": "^0.3.0",
     "react": "^18",

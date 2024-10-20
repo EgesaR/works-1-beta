@@ -17,47 +17,41 @@ import MessageRoundedIcon from "@mui/icons-material/MessageRounded";
 
 const Aside = () => {
   const [isActive, setIsActive] = useState(false);
+  const tabList = [
+    {
+      icon: <GridViewOutlinedIcon className="text-sky-500" />
+    },
+    {
+      icon: <SearchRoundedIcon className="text-sky-500" />
+    },
+    {
+      icon: <CloudQueueRoundedIcon  className="text-sky-500" />
+    },
+    {
+      icon: <StorefrontOutlinedIcon  className="text-sky-500" />
+    },
+    {
+      icon: <CalendarMonthOutlinedIcon className="text-sky-500" />
+    },
+    {
+      icon: <TextsmsOutlinedIcon className="text-sky-500" />
+    },
+  ]
   return (
     <aside className="h-full w-[6%] flex flex-col items-center text-black dark:text-white bg-white dark:bg-black py-4">
       <h1 className="font-semibold">W1B</h1>
       <div className="my-auto flex flex-col gap-4 items-center">
-        <Button isIconOnly variant="light">
-          <GridViewOutlinedIcon className="text-sky-500" />
+        {
+        tabList.map((item, index) => (
+        <Button isIconOnly variant="light" className="">
+          {item.icon}
         </Button>
-        <Button isIconOnly variant="light">
-          <SearchRoundedIcon className="text-sky-500" />
-        </Button>
-        <Button isIconOnly variant="light">
-          <CloudQueueRoundedIcon className="text-sky-500" />
-        </Button>
-        <Button isIconOnly variant="light">
-          <StorefrontOutlinedIcon className="text-sky-500" />
-        </Button>
-        <Button isIconOnly variant="light">
-          <CalendarMonthOutlinedIcon className="text-sky-500" />
-        </Button>
-        <Button isIconOnly variant="light">
-          <TextsmsOutlinedIcon className="text-sky-500" />
-        </Button>
-        <AsideButton>
-          <CalendarMonthOutlinedIcon className="text-green-500" />
-        </AsideButton>
+      ))
+      }
       </div>
     </aside>
   );
 };
 
-const AsideButton = ({ icon }) => {
-  return (
-    <Button isIconOnly variant="light">
-      {icon}
-      <TextsmsOutlinedIcon className="text-sky-500" />
-    </Button>
-  );
-};
-
-AsideButton.propTypes = {
-  icon: PropTypes.node.isRequired,
-};
 
 export default Aside;

@@ -35,3 +35,13 @@ body {
     text-wrap: balance;
   }
 }
+
+#asideBtn span{
+      height: 100%;
+    width: 2px;
+    right: 0px;
+}
+
+#asideBtn div{
+      margin-right: 2px;
+}
